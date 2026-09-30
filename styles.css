@@ -1,7 +1,7 @@
 /*
  * Yeonkyoung So | personal research homepage
  * Visual basis: DESIGN-ollama.md. White canvas, 720px reading column,
- * Inter typography throughout and restrained black/outline pills.
+ * Inter for Latin, Noto Sans KR/TC for Korean/Chinese, and restrained pills.
  * No branding, terminal mockups, section-color bands, or shadow effects.
  */
 :root {
@@ -17,7 +17,9 @@
   --on-primary: #ffffff;
   --focus-ring: rgba(59, 130, 246, 0.5);
   --font-heading: var(--font-body);
-  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", sans-serif;
+  --font-body: "Inter", "Noto Sans KR", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", sans-serif;
+  --font-ko: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", sans-serif;
+  --font-hanja: "Noto Sans TC", "Noto Sans CJK TC", "Noto Sans KR", sans-serif;
   --content-width: 720px;
   --section-space: 88px;
   --page-gutter: 24px;
@@ -42,6 +44,9 @@ body {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
+/* Explicit language tags prevent TC from overriding Korean or Inter text. */
+[lang="ko"] { font-family: var(--font-ko); font-optical-sizing: auto; }
+[lang="zh-Hant"] { font-family: var(--font-hanja); font-optical-sizing: auto; }
 [hidden] { display: none !important; }
 p, h1, h2, h3, ul { margin: 0; }
 a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
@@ -127,7 +132,68 @@ main:focus, section[tabindex="-1"]:focus { outline: none; }
 .detail-label { display: block; margin-bottom: 3px; color: var(--charcoal); font-weight: 500; font-size: 12px; }
 .thesis cite { font-style: normal; }
 .education-detail { margin-top: 8px; font-size: 14px; }
-.background-note { margin-top: 32px; font-size: 14px; line-height: 1.5; }
+
+/* A small personal corner on the same white page. No large slogan or autoplay. */
+.personal-section h2 { font-size: 20px; font-weight: 500; }
+.favorite-quote, .collected-quote { margin: 0; }
+.favorite-quote { margin-top: 24px; }
+.hanja-quote { margin: 0; color: var(--ink); font-size: 26px; font-weight: 500; line-height: 1.6; letter-spacing: .14em; }
+.quote-meta { margin-top: 8px; color: var(--body); font-size: 12px; line-height: 1.7; }
+.quote-meta cite, .collected-quote cite { font-style: normal; }
+.quote-meta a, .collected-quote figcaption a { color: var(--body); text-decoration-color: var(--hairline-strong); }
+.quote-gloss { margin-top: 7px; color: var(--charcoal); font-size: 14px; line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; }
+.more-quotes { margin-top: 12px; }
+.more-quotes > summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; margin-left: -12px; border-radius: var(--pill); color: var(--charcoal); font-size: 13px; line-height: 1.5; cursor: pointer; list-style: none; }
+.more-quotes > summary::-webkit-details-marker { display: none; }
+.more-quotes > summary::marker { content: ""; }
+.more-quotes > summary:active { background: var(--surface-soft); }
+.details-chevron { width: 14px; height: 14px; flex: 0 0 auto; }
+.more-quotes[open] .details-chevron { transform: rotate(180deg); }
+.quote-collection { display: grid; gap: 24px; padding: 12px 0 8px; }
+.collected-quote blockquote { margin: 0; color: var(--charcoal); font-size: 15px; line-height: 1.7; overflow-wrap: break-word; }
+.collected-quote blockquote[lang="ko"] { word-break: keep-all; }
+.collected-quote figcaption { margin-top: 6px; color: var(--body); font-size: 12px; line-height: 1.7; }
+.quote-location { display: block; margin-top: 2px; }
+.bgm-strip { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px 24px; margin-top: 28px; padding: 20px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-soft); }
+.bgm-copy { min-width: 0; }
+.bgm-label { color: var(--body); font-size: 11px; font-weight: 500; letter-spacing: .12em; line-height: 1.5; }
+.track-title { margin-top: 6px; color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.5; overflow-wrap: break-word; }
+.track-artist { color: var(--body); font-size: 13px; font-weight: 400; white-space: nowrap; }
+.track-note { margin-top: 4px; color: var(--body); font-size: 13px; line-height: 1.6; }
+.bgm-link { flex-shrink: 0; min-height: 44px; padding-inline: 14px; font-size: 13px; }
+.play-icon { width: 13px; height: 13px; flex: 0 0 auto; }
+
+/* Optional personal details, collapsed until the reader chooses to open them. */
+.personal-facts { margin-top: 24px; }
+.personal-facts > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  min-height: 44px;
+  margin-left: -12px;
+  padding: 8px 12px;
+  border-radius: var(--pill);
+  color: var(--charcoal);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+.personal-facts > summary::-webkit-details-marker { display: none; }
+.personal-facts > summary::marker { content: ""; }
+.personal-facts > summary:active { background: var(--surface-soft); }
+.personal-facts[open] > summary .details-chevron { transform: rotate(180deg); }
+.personal-facts-copy {
+  display: grid;
+  gap: 14px;
+  padding-top: 12px;
+  color: var(--charcoal);
+  font-size: 14px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
 
 .site-footer { margin-top: var(--section-space); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px 32px; border-top: 1px solid var(--hairline); font-size: 12px; line-height: 1.5; }
@@ -153,6 +219,10 @@ main:focus, section[tabindex="-1"]:focus { outline: none; }
   .nav-enhanced .primary-nav a { padding-inline: 14px; min-height: 44px; }
 }
 @media (max-width: 640px) {
+  .hanja-quote { font-size: 24px; }
+  .bgm-strip { padding: 18px; gap: 16px; }
+  .track-artist { display: block; margin-top: 2px; }
+  .artist-divider { display: none; }
   :root { --section-space: 48px; }
   .hero { padding-top: 32px; }
   .hero-stack { gap: 20px; }
@@ -170,7 +240,6 @@ main:focus, section[tabindex="-1"]:focus { outline: none; }
   .education-entry { grid-template-columns: 1fr; gap: 6px; }
   .dates { padding-top: 0; font-size: 12px; }
   .education-list { gap: 24px; }
-  .background-note { margin-top: 24px; }
   .footer-inner { align-items: flex-start; }
   .footer-inner > div { flex-direction: column; align-items: flex-start; }
 }
