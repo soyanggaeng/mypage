@@ -1,136 +1,173 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="소연경 프로필">
-    <meta property="og:description" content="I want to break free">
-    <meta property="og:image" content="연경.jpg">
-    <title>소연경 프로필</title>
-    <style>
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        * {
-            font-family: "Pretendard",serif;
-        }
-        body {
-            background: linear-gradient(180deg, #FFFCFD 0%, #fff5e3 100%);
-            height: 140vh;
-          }
-        .profile {
-            width: 100px;
-            height: 100px;
-
-            border-radius: 100%;
-
-            border : 2px solid white;
-
-            background-image: url('연경.jpg');
-            background-position: center;
-            background-size: cover;
-        }
-        .main {
-            color : #000000;
-            font-size: 22px;
-            size : 20px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-        .sub {
-            color : #000000;
-            font-size: 14px;
-            font-weight: 400;
-            size : 14px;
-            margin-top: 0px;
-            margin-bottom: 30px;
-        }
-        .wrap {
-            width: 300px;
-            margin: 30px auto 0px auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .bigbutton {
-            width: 320px;
-            height: 59px;
-            border-radius: 8px;
-            background-color: white;
-            margin-bottom: 16px;
-            font-size: 14px;
-            font-weight: bold;
-            color:#3C4048;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            box-shadow: 0px 4px 16px rgba(232, 52, 78, 0.2);
-        }
-        .buttons > a {
-            width: 152px;
-            height: 59px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: bold;
-            color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            box-shadow: 0px 4px 16px rgba(232, 52, 78, 0.2);
-            margin: 0px 8px 17px 8px;
-        }
-        .instagram {
-            background-color: #F8A3A4;
-        }
-        .facebook {
-            background-color: #DE838D;
-        }
-        .github {
-            background-color: #F05E73;
-        }
-        /* 2023's pantone viva magenta */
-        .linkedin {
-            background-color: #BE3455;
-        }
-        .personalblog {
-            background-color: #6B3339;
-        }
-        .reviewblog {
-            background-color: #582a2e;
-        }
-        .buttons {
-            display: flex;
-        }
-        .wrap > a:hover {
-            background-color: #f2f2f2;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="Yeonkyoung So, Ph.D. student in Data Science at Seoul National University. Research in benchmark design, model evaluation, and language understanding." name="description"/>
+<meta content="Yeonkyoung So | Seoul National University" property="og:title"/>
+<meta content="Benchmark design, model evaluation, and language understanding." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://soyanggaeng.github.io/mypage/" property="og:url"/>
+<meta content="https://soyanggaeng.github.io/mypage/%EC%97%B0%EA%B2%BD.jpg" property="og:image"/>
+<meta content="Profile photograph of Yeonkyoung So" property="og:image:alt"/>
+<title>Yeonkyoung So | Seoul National University</title>
+<link href="https://soyanggaeng.github.io/mypage/" rel="canonical"/>
+<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<!-- Inter (Google Fonts) for headings, body, and controls.
+       System fonts remain as fallbacks. No font binaries are bundled. -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&amp;display=swap" rel="stylesheet"/>
+<link href="./styles.css?v=ollama-inter-20260930" rel="stylesheet"/>
+<script defer="" src="./script.js?v=ollama-20260930"></script>
 </head>
-<body>
-    <div class="wrap">
-        <div class="profile"></div>
-        <h1 class="main">소연경</h1>
-        <p class="sub">Studied Western History<br>Studying to be Data Scientist<br>🎵I want to break free<br><br>✉️email: kathy1028@snu.ac.kr</p>
-<!--         <a class="bigbutton"target="_blank" href="https://soyanggaeng.github.io/mybucketlist/">🗒 2023 버킷리스트</a> -->
-        <a class="bigbutton"target="_blank" href="https://drive.google.com/file/d/1hCjNdmieqvZN8jFQMjviDLSwxTEGFGIr/view?usp=sharing">🎓 전공소개서</a>
-        <a class="bigbutton"target="_blank" href="https://drive.google.com/file/d/1-NvJwFQzmMNX5wTNTAgS5mqkx-TERqTC/view?usp=sharing">💼 간단 이력서</a>
-        
-        <div class="buttons">
-            <a class="instagram" target="_blank" href="https://www.instagram.com/so_yanggaeng/">인스타그램</a>
-            <a class="facebook"target="_blank" href="https://www.facebook.com/yeonkyoungso/">페이스북</a>
-        </div>
-        <div class="buttons">
-            <a class="github" target="_blank" href="https://github.com/soyanggaeng">깃허브</a>
-            <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/%EC%97%B0%EA%B2%BD-%EC%86%8C-31a754247/">링크드인</a>
-        </div>
-        <div class="buttons">
-            <a class="personalblog" target="_blank" href="https://blog.naver.com/kathy1028">개인 블로그</a>
-            <a class="reviewblog"target="_blank" href="https://blog.naver.com/yeonkso">리뷰 블로그</a>
-        </div>
-    </div>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-inner">
+<a aria-label="Yeonkyoung So, back to top" class="site-name" href="#top">Yeonkyoung So</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" hidden="" type="button">
+<span>Menu</span><span aria-hidden="true" class="menu-lines"><span></span><span></span></span>
+</button>
+<nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#education">Education</a>
+</nav>
+</div>
+</header>
+<main id="main" tabindex="-1">
+<!-- ABOUT: edit the biography here. There is intentionally no CV link. -->
+<section aria-labelledby="name" class="hero" id="about">
+<div class="container hero-stack"><div class="portrait" data-portrait="">
+<img alt="Profile photograph of Yeonkyoung So" data-fallback-src="https://soyanggaeng.github.io/mypage/%EC%97%B0%EA%B2%BD.jpg" data-profile-photo="" decoding="async" fetchpriority="high" height="112" src="./연경.jpg" width="112"/>
+<p class="photo-fallback" hidden="">Profile photo<br/><span>Image unavailable</span></p>
+</div>
+<div class="hero-copy">
+<h1 id="name">Yeonkyoung So</h1>
+<p class="korean-name" lang="ko">소연경</p>
+<p class="role">Ph.D. Student in Data Science</p>
+<p class="affiliation">Graduate School of Data Science<br/>Seoul National University</p>
+<p class="hero-bio">My research centers on benchmarking and evaluating language models. I aim to build evaluations that reveal model capabilities and limitations beyond aggregate scores.</p>
+<div aria-label="Contact and profiles" class="profile-links">
+<a class="button button-primary" href="mailto:kathy1028@snu.ac.kr">Email</a>
+<a class="button button-secondary" href="https://scholar.google.com/citations?user=Mx6WToIAAAAJ&amp;hl=ko" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+<a class="button button-secondary" href="https://github.com/soyanggaeng" rel="noopener noreferrer" target="_blank">GitHub</a>
+</div>
+</div>
+<!-- Keep the original 연경.jpg in the repository root; do not substitute a CV portrait. -->
+
+</div>
+</section>
+<!-- RESEARCH: established work is kept separate from broader, exploratory interests. -->
+<section aria-labelledby="research-title" class="research-section section" id="research">
+<div class="container research-content">
+<div class="research-heading">
+<h2 id="research-title">Research interests</h2>
+<ul aria-label="Research topics" class="research-topics">
+<li>Benchmark Design</li>
+<li>Model Evaluation</li>
+<li>Language Understanding</li>
+</ul>
+</div>
+<div class="research-copy">
+<p>I study how benchmark design, evaluation protocols, and scoring methods shape our understanding of language models. My work includes Korean language benchmarks, sentence-level negation, and answer-choice sensitivity.</p>
+<p class="broader-interest">More broadly, I am interested in the reliable and responsible use of AI in real-world settings.</p>
+</div>
+</div>
+</section>
+<!-- PUBLICATIONS: titles, authors, resources, and acceptance labels are preserved
+         from the previous version. No unpublished PDFs are included or linked. -->
+<section aria-labelledby="publications-title" class="publications-section section" id="publications">
+<div class="container">
+<div class="section-heading">
+<h2 id="publications-title">Selected publications</h2>
+<a class="text-link" href="https://scholar.google.com/citations?user=Mx6WToIAAAAJ&amp;hl=ko" rel="noopener noreferrer" target="_blank">Google Scholar<svg aria-hidden="true" class="icon" fill="none" viewbox="0 0 16 16"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35"></path></svg></a>
+</div>
+<div class="publication-key"><span class="year">2026</span><p><span aria-hidden="true">*</span> Equal contribution</p></div>
+<div class="publication-list">
+<article aria-labelledby="kbs-title" class="publication">
+<div class="publication-meta"><span class="venue">AACL-IJCNLP 2026 · Main</span><span class="paper-status">To appear</span></div>
+<h3 id="kbs-title">KBS: A Korean Benchmark Suite for Foundation Model Evaluation</h3>
+<p class="authors"><strong>Yeonkyoung So</strong>, Jongmin Kim, Sungmok Jung, Gyuseong Lee, Sangho Kim, Jongyeon Park, Joonhak Lee, Seho Pyo, Gyeongje Cho, Seorin Kim, JiSoo Kim, Suyoung Park, Hyunji M. Park, Yelim Ahn, Yeongho Seo, Jaejin Lee</p>
+<p class="publication-description">A Korean benchmark suite spanning six capabilities, with task-specific adaptation and analysis of how evaluation settings shape model scores.</p>
+</article>
+<article aria-labelledby="deid-title" class="publication">
+<div class="publication-meta"><span class="venue">EMNLP 2026 · Main</span><span class="paper-status">Oral · To appear</span></div>
+<h3 id="deid-title">Thunder-DeID+: Boundary-Aware Korean De-identification from Court Judgments to Broader Sensitive Documents</h3>
+<p class="authors">Gyuseong Lee<sup>*</sup>, Gyeongje Cho<sup>*</sup>, Jongmin Kim<sup>*</sup>, Heejin Kim<sup>*</sup>, <strong>Yeonkyoung So</strong>, Hyungeun Jeon, Hyunji M. Park, Sangho Kim, Yoonhee Park, Yeongbin Pyo, Jaejin Lee</p>
+<p class="publication-description">Boundary-aware Korean de-identification with a refined PII taxonomy and tokenizer-independent evaluation, extending from court judgments to broader sensitive documents.</p>
+</article>
+<article aria-labelledby="konubench-title" class="publication">
+<div class="publication-meta"><span class="venue">Findings of ACL 2026</span></div>
+<h3 id="konubench-title">Thunder-KoNUBench: A Corpus-Aligned Benchmark for Korean Negation Understanding</h3>
+<p class="authors">Sungmok Jung<sup>*</sup>, <strong>Yeonkyoung So</strong><sup>*</sup>, Joonhak Lee<sup>*</sup>, Sangho Kim, Yelim Ahn, Jaejin Lee</p>
+<p class="publication-description">A corpus-aligned benchmark for Korean negation understanding, with analyses of model behavior and the effects of fine-tuning.</p>
+<div aria-label="Resources for Thunder-KoNUBench: A Corpus-Aligned Benchmark for Korean Negation Understanding" class="paper-links"><a href="https://aclanthology.org/2026.findings-acl.324/" rel="noopener noreferrer" target="_blank">Paper</a>
+<a href="https://github.com/mcrl/Thunder-KoNUBench" rel="noopener noreferrer" target="_blank">Code</a>
+<a href="https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-KoNUBench" rel="noopener noreferrer" target="_blank">Dataset</a></div>
+</article>
+<article aria-labelledby="choices-title" class="publication">
+<div class="publication-meta"><span class="venue">ICLR 2026</span></div>
+<h3 id="choices-title">Choices Speak Louder than Questions</h3>
+<p class="authors">Gyeongje Cho<sup>*</sup>, <strong>Yeonkyoung So</strong><sup>*</sup>, Jaejin Lee</p>
+<p class="publication-description">An analysis of choice sensitivity in multiple-choice evaluation and a scoring method that isolates the contribution of the question.</p>
+<div aria-label="Resources for Choices Speak Louder than Questions" class="paper-links"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/7ae2b0eedc560e3afbffd68445b8a220-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">Paper</a>
+</div>
+</article>
+<article aria-labelledby="nubench-title" class="publication">
+<div class="publication-meta"><span class="venue">Findings of EACL 2026</span></div>
+<h3 id="nubench-title">Thunder-NUBench: A Benchmark for LLMs’ Sentence-Level Negation Understanding</h3>
+<p class="authors"><strong>Yeonkyoung So</strong>, Gyuseong Lee, Sungmok Jung, Joonhak Lee, JiA Kang, Sangho Kim, Jaejin Lee</p>
+<p class="publication-description">A sentence-level negation benchmark that distinguishes standard negation from local negation, contradiction, and paraphrase.</p>
+<div aria-label="Resources for Thunder-NUBench: A Benchmark for LLMs’ Sentence-Level Negation Understanding" class="paper-links"><a href="https://aclanthology.org/2026.findings-eacl.250/" rel="noopener noreferrer" target="_blank">Paper</a>
+<a href="https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-NUBench" rel="noopener noreferrer" target="_blank">Dataset</a></div>
+</article>
+</div>
+</div>
+</section>
+<!-- EDUCATION: the master's thesis title was explicitly corrected by the owner. -->
+<section aria-labelledby="education-title" class="education-section section" id="education">
+<div class="container">
+<h2 id="education-title">Education</h2>
+<div class="education-list">
+<article aria-labelledby="phd-title" class="education-entry">
+<p class="dates"><time datetime="2025-03">Mar. 2025</time> – Present</p>
+<div class="education-body">
+<div class="degree-heading"><h3 id="phd-title">Ph.D. in Data Science</h3><span class="degree-status">In progress</span></div>
+<p class="institution">Seoul National University</p>
+</div>
+</article>
+<article aria-labelledby="masters-title" class="education-entry">
+<p class="dates"><time datetime="2022-03">Mar. 2022</time> – <time datetime="2024-08">Aug. 2024</time></p>
+<div class="education-body">
+<h3 id="masters-title">Master’s in Data Science</h3>
+<p class="institution">Seoul National University</p>
+<p class="thesis"><span class="detail-label">Thesis</span><cite>NeVer: A Comprehensive Dataset for Negation Handling in Language Models</cite></p>
+</div>
+</article>
+<article aria-labelledby="bachelors-title" class="education-entry">
+<p class="dates"><time datetime="2017-03">Mar. 2017</time> – <time datetime="2022-02">Feb. 2022</time></p>
+<div class="education-body">
+<h3 id="bachelors-title">Bachelor’s in Western History</h3>
+<p class="institution">Seoul National University</p>
+<p class="education-detail">Combined minor: Data Science for the Humanities</p>
+</div>
+</article>
+</div>
+<p class="background-note">Before moving into data science, I studied Western History at Seoul National University.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<div><p>© 2026 Yeonkyoung So</p><a href="mailto:kathy1028@snu.ac.kr">kathy1028@snu.ac.kr</a></div>
+<a class="back-to-top" href="#top">Back to top<svg aria-hidden="true" class="icon" fill="none" viewbox="0 0 16 16"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35"></path></svg></a>
+</div>
+</footer>
 </body>
 </html>

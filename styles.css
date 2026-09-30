@@ -1,0 +1,203 @@
+/*
+ * Yeonkyoung So | personal research homepage
+ * Visual basis: DESIGN-ollama.md. White canvas, 720px reading column,
+ * Inter typography throughout and restrained black/outline pills.
+ * No branding, terminal mockups, section-color bands, or shadow effects.
+ */
+:root {
+  --primary: #000000;
+  --ink: #000000;
+  --ink-deep: #090909;
+  --charcoal: #525252;
+  --body: #737373;
+  --canvas: #ffffff;
+  --surface-soft: #fafafa;
+  --hairline: #e5e5e5;
+  --hairline-strong: #d4d4d4;
+  --on-primary: #ffffff;
+  --focus-ring: rgba(59, 130, 246, 0.5);
+  --font-heading: var(--font-body);
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", sans-serif;
+  --content-width: 720px;
+  --section-space: 88px;
+  --page-gutter: 24px;
+  --nav-height: 56px;
+  --pill: 9999px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--body);
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+[hidden] { display: none !important; }
+p, h1, h2, h3, ul { margin: 0; }
+a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a, button { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+img { display: block; max-width: 100%; }
+strong { font-weight: 600; color: var(--ink); }
+h1, h2 { color: var(--ink); font-family: var(--font-heading); letter-spacing: 0; }
+h1 { font-size: 36px; font-weight: 500; line-height: 1.11; }
+h2 { font-size: 24px; font-weight: 600; line-height: 1.33; }
+h3 { font-family: var(--font-body); color: var(--ink); font-size: 18px; font-weight: 500; line-height: 1.5; }
+sup { vertical-align: super; font-size: .75em; line-height: 0; }
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 4px; }
+main:focus, section[tabindex="-1"]:focus { outline: none; }
+.container { width: min(var(--content-width), calc(100% - var(--page-gutter) * 2)); margin-inline: auto; }
+.section { margin-top: var(--section-space); }
+.icon { width: 14px; height: 14px; flex: 0 0 auto; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 10px 20px; border-radius: var(--pill); color: var(--on-primary); background: var(--primary); transform: translateY(-180%); text-decoration: none; }
+.skip-link:focus { transform: translateY(0); }
+
+/* White, text-only utility navigation. No personal name rendered as a logo. */
+.site-header { position: relative; z-index: 10; background: var(--canvas); }
+.nav-inner { min-height: var(--nav-height); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-name { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 500; white-space: nowrap; text-decoration: none; border-radius: var(--pill); }
+.primary-nav { display: flex; align-items: center; gap: 24px; }
+.primary-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: var(--pill); }
+.menu-toggle { display: none; }
+
+/* Center-aligned introduction, with the existing repository photo kept small. */
+.hero { padding-top: 56px; }
+.hero-stack { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.portrait { position: relative; width: 112px; height: 112px; border-radius: 50%; overflow: hidden; background: var(--surface-soft); flex: 0 0 auto; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.photo-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 12px; text-align: center; color: var(--body); font-size: 12px; line-height: 1.4; }
+.photo-fallback span { font-size: 10px; }
+.hero-copy { text-align: center; max-width: 640px; width: 100%; }
+.korean-name { margin-top: 8px; font-size: 16px; color: var(--charcoal); }
+.role { margin-top: 20px; font-size: 16px; font-weight: 500; color: var(--ink); }
+.affiliation { margin-top: 6px; font-size: 14px; line-height: 1.6; }
+.hero-bio { max-width: 592px; margin: 24px auto 0; font-size: 16px; line-height: 1.5; text-wrap: pretty; }
+.profile-links { margin-top: 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.button { min-height: 36px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 20px; border-radius: var(--pill); border: 1px solid transparent; font-size: 14px; font-weight: 500; line-height: 1.25; text-decoration: none; }
+.button-primary { color: var(--on-primary); background: var(--primary); }
+.button-primary:active { background: var(--ink-deep); }
+.button-secondary { color: var(--ink); background: var(--canvas); border-color: var(--hairline-strong); }
+.button-secondary:active { background: var(--surface-soft); }
+
+/* The research section stays on the same white canvas, in the same column. */
+.research-topics { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.research-topics li { color: var(--charcoal); background: var(--surface-soft); padding: 6px 12px; border-radius: var(--pill); font-size: 14px; line-height: 1.43; }
+.research-copy { margin-top: 20px; }
+.research-copy p { font-size: 16px; line-height: 1.5; }
+.research-copy .broader-interest { margin-top: 12px; }
+
+/* A bibliography, not marketing cards. Dividers are limited to list rows. */
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.text-link { display: inline-flex; align-items: center; gap: 4px; min-height: 36px; font-size: 14px; line-height: 1.43; border-radius: var(--pill); }
+.section-heading .text-link { white-space: nowrap; }
+.publication-key { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; }
+.year { color: var(--charcoal); font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.publication-key p { font-size: 12px; line-height: 1.33; }
+.publication { padding-block: 28px; border-bottom: 1px solid var(--hairline); }
+.publication:first-child { padding-top: 24px; }
+.publication:last-child { border-bottom: 0; padding-bottom: 0; }
+.publication-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 8px; }
+.venue { color: var(--charcoal); font-size: 12px; font-weight: 500; line-height: 1.6; }
+.paper-status { background: var(--surface-soft); color: var(--charcoal); border: 1px solid var(--hairline); border-radius: var(--pill); padding: 2px 8px; font-size: 12px; line-height: 1.4; }
+.publication h3 { text-wrap: pretty; overflow-wrap: break-word; }
+.authors { margin-top: 8px; font-size: 14px; line-height: 1.55; }
+.publication-description { margin-top: 10px; font-size: 16px; line-height: 1.5; }
+.paper-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.paper-links a { display: inline-flex; align-items: center; justify-content: center; padding: 8px 16px; min-height: 36px; color: var(--ink); background: var(--canvas); border: 1px solid var(--hairline-strong); border-radius: var(--pill); text-decoration: none; font-size: 14px; font-weight: 500; line-height: 1.25; }
+.paper-links a:active { background: var(--surface-soft); }
+
+/* Education retains the exact degree dates and owner-corrected thesis title. */
+.education-list { display: grid; gap: 28px; margin-top: 24px; }
+.education-entry { display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; }
+.dates { padding-top: 3px; color: var(--body); font-size: 14px; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.degree-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; }
+.degree-status { color: var(--body); font-size: 12px; line-height: 1.4; }
+.institution { margin-top: 4px; font-size: 14px; line-height: 1.5; }
+.thesis { margin-top: 12px; font-size: 14px; line-height: 1.55; }
+.detail-label { display: block; margin-bottom: 3px; color: var(--charcoal); font-weight: 500; font-size: 12px; }
+.thesis cite { font-style: normal; }
+.education-detail { margin-top: 8px; font-size: 14px; }
+.background-note { margin-top: 32px; font-size: 14px; line-height: 1.5; }
+
+.site-footer { margin-top: var(--section-space); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px 32px; border-top: 1px solid var(--hairline); font-size: 12px; line-height: 1.5; }
+.footer-inner > div { display: flex; flex-wrap: wrap; align-items: center; column-gap: 20px; row-gap: 4px; }
+.footer-inner a { display: inline-flex; align-items: center; min-height: 36px; border-radius: var(--pill); }
+.footer-inner > div a { color: var(--body); }
+.back-to-top { gap: 4px; white-space: nowrap; }
+.back-to-top .icon { width: 12px; height: 12px; }
+
+@media (max-width: 850px) {
+  :root { --section-space: 64px; }
+}
+@media (max-width: 767px) {
+  .nav-inner { flex-wrap: wrap; gap: 0 16px; }
+  .primary-nav { flex-wrap: wrap; gap: 0 20px; }
+  .nav-enhanced .menu-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 36px; padding: 8px 14px; border-radius: var(--pill); border: 1px solid var(--hairline-strong); color: var(--ink); background: var(--canvas); font-size: 14px; font-weight: 500; }
+  .menu-lines { display: flex; flex-direction: column; gap: 4px; width: 14px; }
+  .menu-lines span { display: block; width: 14px; height: 1px; background: currentColor; }
+  .menu-toggle[aria-expanded="true"] .menu-lines span:first-child { transform: translateY(2.5px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] .menu-lines span:last-child { transform: translateY(-2.5px) rotate(-45deg); }
+  .nav-enhanced .primary-nav { display: none; width: 100%; padding-block: 8px 16px; flex-direction: column; align-items: stretch; gap: 4px; }
+  .nav-enhanced .primary-nav.is-open { display: flex; }
+  .nav-enhanced .primary-nav a { padding-inline: 14px; min-height: 44px; }
+}
+@media (max-width: 640px) {
+  :root { --section-space: 48px; }
+  .hero { padding-top: 32px; }
+  .hero-stack { gap: 20px; }
+  h1 { font-size: 28px; line-height: 1.15; }
+  .role { margin-top: 16px; }
+  .hero-bio { margin-top: 20px; }
+  .profile-links { margin-top: 20px; }
+  .button, .paper-links a { min-height: 44px; }
+  .research-topics { gap: 6px; }
+  .research-topics li { font-size: 12px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .publication-key { margin-top: 20px; }
+  .publication { padding-block: 24px; }
+  .publication:first-child { padding-top: 20px; }
+  .education-entry { grid-template-columns: 1fr; gap: 6px; }
+  .dates { padding-top: 0; font-size: 12px; }
+  .education-list { gap: 24px; }
+  .background-note { margin-top: 24px; }
+  .footer-inner { align-items: flex-start; }
+  .footer-inner > div { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 360px) {
+  :root { --page-gutter: 20px; }
+  .button { padding-inline: 15px; font-size: 13px; }
+  .profile-links { gap: 6px; }
+  .primary-nav a { font-size: 13px; }
+  .research-topics li { padding-inline: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  body { color: #000; font-size: 10pt; }
+  .site-header, .skip-link, .back-to-top { display: none !important; }
+  .container { width: 100%; }
+  .hero { padding-top: 0; }
+  .portrait { width: 72pt; height: 72pt; }
+  h1 { font-size: 24pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 12pt; }
+  .section, .site-footer { margin-top: 24pt; }
+  .hero-bio, .research-copy p, .publication-description { font-size: 10pt; }
+  .publication, .education-entry { break-inside: avoid; }
+  .publication { padding-block: 14pt; }
+  .button, .paper-links a { min-height: 0; padding: 4pt 8pt; background: none; color: #000; border-color: #d4d4d4; }
+  .education-entry { grid-template-columns: 120pt minmax(0, 1fr); }
+  .research-topics li, .paper-status { background: none; }
+}
