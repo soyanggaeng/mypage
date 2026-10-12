@@ -133,6 +133,77 @@ main:focus, section[tabindex="-1"]:focus { outline: none; }
 .thesis cite { font-style: normal; }
 .education-detail { margin-top: 8px; font-size: 14px; }
 
+
+/* Thesis details remain within Education; no separate content page is required. */
+.thesis-description {
+  margin-top: 8px;
+  color: var(--charcoal);
+  font-size: 13px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+.thesis-details { margin-top: 8px; }
+.thesis-details > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  min-height: 44px;
+  margin-left: -12px;
+  padding: 8px 12px;
+  border-radius: var(--pill);
+  color: var(--charcoal);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+.thesis-details > summary::-webkit-details-marker { display: none; }
+.thesis-details > summary::marker { content: ""; }
+.thesis-details > summary:active { background: var(--surface-soft); }
+.thesis-details[open] > summary .details-chevron { transform: rotate(180deg); }
+.thesis-details-copy {
+  display: grid;
+  gap: 8px;
+  padding: 6px 0 0;
+  color: var(--charcoal);
+  font-size: 13px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+.thesis-work-title { font-size: 14px; color: var(--ink); }
+.thesis-work-title cite { font-style: normal; }
+.thesis-details-copy .thesis-language { color: var(--body); font-size: 12px; }
+
+/* Selected awards stay concise; certifications are supporting detail, closed by default. */
+.awards-list { display: grid; gap: 24px; margin-top: 24px; }
+/* Korean and its English translation form one award, not two entries. */
+.award-entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 12px 32px; min-width: 0; break-inside: avoid; }
+.award-copy { min-width: 0; }
+.award-prize { color: var(--charcoal); font-size: 12px; font-weight: 500; line-height: 1.6; margin-bottom: 5px; }
+.award-entry h3, .award-title-en { font-size: 16px; font-weight: 500; line-height: 1.5; overflow-wrap: break-word; text-wrap: pretty; }
+.award-copy[lang="ko"] h3 { font-family: var(--font-ko); word-break: keep-all; }
+.award-title-en { color: var(--charcoal); }
+@media (max-width: 640px) {
+  .award-entry { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}
+.certifications { margin-top: 24px; }
+.certifications > summary { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; min-height: 44px; margin-left: -12px; padding: 8px 12px; border-radius: var(--pill); color: var(--charcoal); font-size: 14px; font-weight: 500; line-height: 1.5; cursor: pointer; list-style: none; }
+.certifications > summary::-webkit-details-marker { display: none; }
+.certifications > summary::marker { content: ""; }
+.certifications > summary:active { background: var(--surface-soft); }
+.certifications[open] > summary .details-chevron { transform: rotate(180deg); }
+.certification-list { display: grid; gap: 12px; padding: 12px 0 0; list-style: none; }
+.certification-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 14px; line-height: 1.7; }
+.certification-name { color: var(--charcoal); font-weight: 500; }
+.certification-detail { color: var(--body); font-size: 13px; word-break: keep-all; }
+/* Keep six section links on one line inside the existing 720px column. */
+@media (min-width: 768px) {
+  .primary-nav { gap: 18px; }
+  .nav-inner { gap: 16px; }
+}
+
 /* A small personal corner on the same white page. No large slogan or autoplay. */
 .personal-section h2 { font-size: 20px; font-weight: 500; }
 .favorite-quote, .collected-quote { margin: 0; }

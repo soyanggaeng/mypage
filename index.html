@@ -15,7 +15,13 @@
 <meta content="Profile photograph of Yeonkyoung So" property="og:image:alt"/>
 <title>Yeonkyoung So | Seoul National University</title>
 <link href="https://soyanggaeng.github.io/mypage/" rel="canonical"/>
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<!-- Site icons use the approved character artwork. The main profile photo is unchanged. -->
+<link href="./assets/favicon.ico?v=avatar-v1" rel="icon" sizes="16x16 32x32 48x48" type="image/x-icon"/>
+<link href="./assets/favicon-16.png?v=avatar-v1" rel="icon" sizes="16x16" type="image/png"/>
+<link href="./assets/favicon-32.png?v=avatar-v1" rel="icon" sizes="32x32" type="image/png"/>
+<link href="./assets/favicon-48.png?v=avatar-v1" rel="icon" sizes="48x48" type="image/png"/>
+<link href="./assets/apple-touch-icon.png?v=avatar-v1" rel="apple-touch-icon" sizes="180x180"/>
+<link href="./site.webmanifest?v=avatar-v1" rel="manifest"/>
 <!-- Inter for Latin text; Noto Sans KR for Korean; Noto Sans TC for the
        classical Chinese quotation. All are loaded from Google Fonts.
        Font binaries are not bundled with the website. -->
@@ -23,7 +29,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&amp;family=Noto+Sans+KR:wght@400..600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&amp;text=%E4%BC%8F%E4%B9%85%E8%80%85%E9%A3%9B%E5%BF%85%E9%AB%98%E8%8F%9C%E6%A0%B9%E8%AD%9A&amp;display=swap" rel="stylesheet"/>
-<link href="./styles.css?v=about-me-v1" rel="stylesheet"/>
+<link href="./styles.css?v=awards-bilingual-v1" rel="stylesheet"/>
 <script defer="" src="./script.js?v=ollama-20260930"></script>
 </head>
 <body id="top">
@@ -40,6 +46,7 @@
 <a href="#publications">Publications</a>
 <a href="#experience">Experience</a>
 <a href="#education">Education</a>
+<a href="#awards">Awards</a>
 </nav>
 </div>
 </header>
@@ -183,6 +190,7 @@
 <h3 id="masters-title">Master’s in Data Science</h3>
 <p class="institution">Seoul National University</p>
 <p class="thesis"><span class="detail-label">Thesis</span><cite>NeVer: A Comprehensive Dataset for Negation Handling in Language Models</cite></p>
+<p class="thesis-description">Developed a human-reviewed dataset to evaluate and improve negation understanding in language models.</p>
 </div>
 </article>
 <article aria-labelledby="bachelors-title" class="education-entry">
@@ -191,9 +199,59 @@
 <h3 id="bachelors-title">Bachelor’s in Western History</h3>
 <p class="institution">Seoul National University</p>
 <p class="education-detail">Combined minor: Data Science for the Humanities</p>
+<!-- The undergraduate thesis is background, not a conference publication.
+     The English title follows the owner's CV. Its PDF is not included. -->
+<details class="thesis-details" id="undergraduate-thesis">
+<summary><span>Undergraduate thesis</span><svg aria-hidden="true" class="details-chevron" fill="none" viewBox="0 0 16 16"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/></svg></summary>
+<div class="thesis-details-copy">
+<p class="thesis-work-title"><cite>Secularization in the United States and the Reaction of Christian Fundamentalism: Focusing on Billy Sunday in the Early 20th Century</cite></p>
+<p class="thesis-language">Western History · Written in Korean</p>
+<p>A historical study of Billy Sunday’s fundamentalist movement and its responses to secularization in the early twentieth-century United States.</p>
+</div>
+</details>
 </div>
 </article>
 </div>
+</div>
+</section>
+<!-- AWARDS: titles are from the owner's professional profile.
+     Korean originals are retained; English titles below are descriptive translations.
+     No inferred placing, award dates, team roles, or project details are added. -->
+<section aria-labelledby="awards-title" class="awards-section section" id="awards">
+<div class="container">
+<h2 id="awards-title">Selected awards</h2>
+<div class="awards-list">
+<article aria-labelledby="award-goorm-title" class="award-entry">
+<div class="award-copy" lang="ko">
+<p class="award-prize">최우수상</p>
+<h3 id="award-goorm-title">4기 구름톤</h3>
+</div>
+<div class="award-copy award-translation" lang="en">
+<p class="award-prize">Top Excellence Award</p>
+<p class="award-title-en">goormthon · 4th edition</p>
+</div>
+</article>
+<article aria-labelledby="award-tourism-title" class="award-entry">
+<div class="award-copy" lang="ko">
+<p class="award-prize">우수상</p>
+<h3 id="award-tourism-title">2023 관광데이터 활용 공모전</h3>
+</div>
+<div class="award-copy award-translation" lang="en">
+<p class="award-prize">Excellence Award</p>
+<p class="award-title-en">2023 Tourism Data Utilization Contest</p>
+</div>
+</article>
+</div>
+<!-- CERTIFICATIONS: optional supporting information, closed by default.
+     Original qualification names are used without adding unverified dates or IDs. -->
+<details class="certifications" id="certifications">
+<summary><span>Certifications</span><svg aria-hidden="true" class="details-chevron" fill="none" viewBox="0 0 16 16"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/></svg></summary>
+<ul class="certification-list" aria-label="Data-related certifications">
+<li><span class="certification-name" lang="ko">빅데이터분석기사</span></li>
+<li><span class="certification-name">SQLD</span><span class="certification-detail" lang="ko">SQL 개발자</span></li>
+<li><span class="certification-name">ADsP</span><span class="certification-detail" lang="ko">데이터분석 준전문가</span></li>
+</ul>
+</details>
 </div>
 </section>
 <!-- PERSONAL: a quiet collection of words and music, not a second biography.
@@ -231,7 +289,7 @@
 <summary><span>A few things about me</span><svg aria-hidden="true" class="details-chevron" fill="none" viewBox="0 0 16 16"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/></svg></summary>
 <div class="personal-facts-copy">
 <p>I enjoy traveling (38 countries so far) and have played 130+ escape room games.</p>
-<p>I like learning languages. I’ve studied Chinese, Japanese, and French, though English is the one I keep working on.</p>
+<p>I like learning languages. I’ve studied Chinese, Japanese, and French (DELF B1), though English is the one I keep working on.</p>
 <p>I’ve taken piano, violin, and flute lessons, and I enjoy singing and watching films.</p>
 <p>I’m not particularly sporty, but I once represented my school in a table tennis tournament. I’m not especially outdoorsy either, but I do like hiking.</p>
 <p>There’s always something else I’d like to try. <small style="white-space: nowrap;">(the list keeps growing <span aria-hidden="true">∞</span>)</small></p>
